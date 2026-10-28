@@ -10,11 +10,11 @@ dns_project_ids = [
   "project-c"
 ]
 
-network_names = [
-  "s-vpc",
-  "dev-vpc",
-  "prod-vpc"
-]
+network_projects = {
+  "project-a" = "s-vpc"
+  "project-b" = "dev-vpc"
+  "project-c" = "prod-vpc"
+}
 psc_network_name = "hub-network"
 psc_endpoint_name = "pscendpoint"
 

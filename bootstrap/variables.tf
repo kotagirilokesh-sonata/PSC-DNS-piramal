@@ -4,9 +4,9 @@ variable "project_id" {
   default     = "sonata-gcp-delivery"
 }
 
-variable "network_names" {
-  description = "List of existing VPC networks that should be attached to the private DNS zone."
-  type        = set(string)
+variable "network_projects" {
+  description = "Existing GCP projects and their VPC network names."
+  type        = map(string)
 }
 
 variable "psc_endpoint_name" {

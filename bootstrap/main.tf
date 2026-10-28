@@ -5,10 +5,10 @@ data "google_project" "dns_projects" {
 }
 
 data "google_compute_network" "existing" {
-  for_each = toset(var.network_names)
+  for_each = var.network_projects
 
   name    = each.value
-  project = var.project_id
+  project = each.key
 }
 
 module "psc" {
